@@ -25,6 +25,7 @@
   users.users.alice = {
     isNormalUser = true;
     description = "alice";
+    initialPassword = "Nixos";
     extraGroups = [
       "wheel"
       "networkmanager"
