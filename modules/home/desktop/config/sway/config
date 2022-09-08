@@ -25,7 +25,7 @@ set $term kitty
 set $menu wofi --show-drun
 
 ### Wallpaper
-output * bg ~/dotfiles/wallpapers/wallhaven-6op6yl.jpg fill
+output * bg ~/NixConf/wallpapers/wallhaven-6op6yl.jpg fill
 
 ### Fonts
 font inconsolata 14

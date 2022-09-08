@@ -45,6 +45,7 @@
 
   programs.git = {
     userName  = "alicetabby";
+    userEmail = "Jacobtrippy124@gmail.com";
   };
 
   programs.gpg.enable = true;
