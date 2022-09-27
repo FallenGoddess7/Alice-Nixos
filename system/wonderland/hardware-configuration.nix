@@ -12,12 +12,12 @@
   boot.kernelModules = [ "kvm-intel" "wl" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/NIXROOT";
+    { device = "/dev/disk/by-uuid/9254750c-71f1-439f-9655-c9a62295e82a";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-label/NIXBOOT";
+    { device = "/dev/disk/by-uuid/1095-0DDD";
       fsType = "vfat";
     };
 
