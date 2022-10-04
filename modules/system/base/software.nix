@@ -12,7 +12,6 @@
     unzip
     zip
     exa
-    linuxKernel.packages.linux_zen.rtl88x2bu
   ];
 
   environment.shells = [ pkgs.zsh pkgs.bash ];

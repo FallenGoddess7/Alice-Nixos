@@ -82,7 +82,7 @@
 
   # Kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.rtl88x2bu ];
 
   # Kernel Parameters.
   boot.kernelParams = [ "quiet" "udev.log_level=3" ];
