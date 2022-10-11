@@ -21,7 +21,7 @@
 /* The Whole Bar */
 #waybar {
 	background: transparent;
-	color: #000000;
+	color: #2E3440;
 	background-color: rgba(46, 52, 64, 0.85);
 	font-family: "inconsolata", "nerdfonts";
 	font-size: 17px;
@@ -41,9 +41,8 @@
 #tray {
 	padding: 0.1rem 0.5rem;
 	margin: 2px 1px;
-	background: #4C566A;
+	background: #88C0D0;
 	border-radius: 10px;
-    /* #7C868A */
 }
 
 /* MODULE STYLES ---------- {{{ */
@@ -55,12 +54,12 @@
 	border-bottom: 0px solid transparent;
 	margin-bottom: 0px;
 	padding: 0px 3px;
-	color: #4C566A;
+	color: #88C0D0;
 }
 #workspaces button.focused {
 	box-shadow: inherit;
-	color: #000000;
-	background: #4C566A;
+	color: #2E3440;
+	background: #88C0D0;
 	border-radius: 10px;
 }
 #workspaces button.urgent {
@@ -69,8 +68,8 @@
 }
 #workspaces button:hover {
 	box-shadow: inherit;
-    color: #000000;
-    background: #4C556A;
+    color: #2E3440;
+    background: #88C0D0;
     border-radius: 10px; 
 }
 
