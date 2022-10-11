@@ -95,8 +95,8 @@
   boot.consoleLogLevel = 0;
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = false;  
-
+  boot.loader.systemd-boot.enable = false;
+  
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "nodev";
