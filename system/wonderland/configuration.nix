@@ -93,6 +93,7 @@
   # Enable silent boot.
   boot.initrd.verbose = false;
   boot.consoleLogLevel = 0;
+  boot.plymouth.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
