@@ -17,7 +17,6 @@
     discord
     betterdiscordctl
     steam
-    polymc
 
     # Development tools
     
