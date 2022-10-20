@@ -26,5 +26,8 @@
     recursive = true;
   };
 
+  # Currently not working for some fucking reason
+  # home.file.".config/zathura/zathurarc".source = ./config/zathura/zathurarc;
+  
   home.file.".config/starship.toml".source = ./config/starship.toml;
 }

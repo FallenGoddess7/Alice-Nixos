@@ -21,8 +21,8 @@
 /* The Whole Bar */
 #waybar {
 	background: transparent;
-	color: #2E3440;
-	background-color: rgba(46, 52, 64, 0.85);
+	color: #303446;
+	background-color: rgba(48, 52, 70, 0.85);
 	font-family: "inconsolata", "nerdfonts";
 	font-size: 17px;
 	border-radius: 0px;
@@ -41,7 +41,7 @@
 #tray {
 	padding: 0.1rem 0.5rem;
 	margin: 2px 1px;
-	background: #88C0D0;
+	background: #F4B8E4;
 	border-radius: 10px;
 }
 
@@ -54,51 +54,51 @@
 	border-bottom: 0px solid transparent;
 	margin-bottom: 0px;
 	padding: 0px 3px;
-	color: #88C0D0;
+	color: #F4B8E4;
 }
 #workspaces button.focused {
 	box-shadow: inherit;
-	color: #2E3440;
-	background: #88C0D0;
+	color: #303446;
+	background: #F4B8E4;
 	border-radius: 10px;
 }
 #workspaces button.urgent {
-	border-color: #BF616A;
-	color: #BF616A;
+	border-color: #E78284;
+	color: #E78284;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
-    color: #2E3440;
-    background: #88C0D0;
+    color: #303446;
+    background: #F4B8E4;
     border-radius: 10px; 
 }
 
 #cpu.warning {
-	background: #EBCB8B;
+	background: #E5C890;
 }
 #cpu.critical {
-	background: #BF616A;
+	background: #E78284;
 }
 
 #memory.warning {
-	background: #EBCB8B;
+	background: #E5C890;
 }
 #memory.critical {
-	background: #BF616A;
+	background: #E78284;
 }
 
 #network.disconnected {
-	background: #BF616A;
+	background: #E78284;
 }
 
 #temperature.critical {
-	background: #BF616A;
+	background: #E78284;
 }
 
 #tray {
 	border-radius: 10px;
 	background: transparent;
-    background-color: rgba(46, 52, 64, 0.0);
+    background-color: rgba(48, 52, 70, 0.0);
 }
 #tray > .passive {
     -gtk-icon-effect: dim;

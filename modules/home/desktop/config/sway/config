@@ -25,7 +25,7 @@ set $term kitty
 set $menu wofi --show-drun
 
 ### Wallpaper
-output * bg ~/NixConf/wallpapers/wallhaven-57qpx9.jpg fill
+output * bg ~/NixConf/wallpapers/wallhaven-k7ow71.jpg fill
 
 ### Fonts
 font inconsolata 14
@@ -37,12 +37,12 @@ gaps inner 7
 
 ### Window colors
 #                       border background text indicator child_border
-client.focused          #4C566A #4C566A #000000 #4C566A #4C566A
-client.unfocused        #2E3440 #2E3440 #4C566A #2E3440 #2E3440
-client.focused_inactive #2E3440 #2E3440 #4C566A #2E3440 #2E3440
-client.placeholder      #2E3440 #2E3440 #4C566A #2E3440 #2E3440
-client.urgent           #BF616A #BF616A #2E3440 #BF616A #BF616A
-client.background               #2E3440
+client.focused          #F4B8E4 #F4B8E4 #303446 #F4B8E4 #F4B8E4
+client.unfocused        #303446 #303446 #C6D0F5 #303446 #303446
+client.focused_inactive #303446 #303446 #C6D0F5 #303446 #303446
+client.placeholder      #303446 #303446 #C6D0F5 #303446 #303446
+client.urgent           #E78284 #E78284 #303446 #E78284 #E78284
+client.background               #303446
 
 ### Always float certain windows
 for_window [app_id="pop-up"]                     floating enable
