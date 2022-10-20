@@ -7,7 +7,7 @@
     neovide
     starship
 
-    gnome.nautilus
+    ranger
 
     # Launchers
     wofi
