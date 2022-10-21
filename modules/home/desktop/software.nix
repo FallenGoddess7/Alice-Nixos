@@ -1,12 +1,15 @@
 { config, pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
+    # Browsers
     brave
     firefox
-    kitty
-    neovide
-    starship
 
+    # Terminal
+    kitty
+
+    # Terminal Apps
+    starship
     ranger
 
     # Launchers
@@ -17,7 +20,6 @@
     autotiling
     mako
     waybar
-    pywal
 
     # CLI Tools
     grim

@@ -11,7 +11,6 @@
 
   home.packages = with pkgs; [
     # Desktop software
-    libreoffice
 
     # Gaming
     discord

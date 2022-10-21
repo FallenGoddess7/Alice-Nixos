@@ -41,7 +41,7 @@
 #tray {
 	padding: 0.1rem 0.5rem;
 	margin: 2px 1px;
-	background: #F4B8E4;
+	background: #CA9EE6;
 	border-radius: 10px;
 }
 
@@ -54,12 +54,12 @@
 	border-bottom: 0px solid transparent;
 	margin-bottom: 0px;
 	padding: 0px 3px;
-	color: #F4B8E4;
+	color: #CA9EE6;
 }
 #workspaces button.focused {
 	box-shadow: inherit;
 	color: #303446;
-	background: #F4B8E4;
+	background: #CA9EE6;
 	border-radius: 10px;
 }
 #workspaces button.urgent {
@@ -69,7 +69,7 @@
 #workspaces button:hover {
 	box-shadow: inherit;
     color: #303446;
-    background: #F4B8E4;
+    background: #CA9EE6;
     border-radius: 10px; 
 }
 

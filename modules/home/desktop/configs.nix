@@ -26,13 +26,15 @@
     recursive = true;
   };
 
-  #xdg.configFile.ranger = {
-  #  source = ./config/ranger;
-  #  recursive = true;
-  #};
+  xdg.configFile.ranger = {
+    source = ./config/ranger;
+    recursive = true;
+  };
 
-  # Currently not working for some fucking reason
-  # home.file.".config/zathura/zathurarc".source = ./config/zathura/zathurarc;
+  xdg.configFile.zathura = {
+    source = ./config/zathura;
+    recursive = true;
+  };
   
   home.file.".config/starship.toml".source = ./config/starship.toml;
 }

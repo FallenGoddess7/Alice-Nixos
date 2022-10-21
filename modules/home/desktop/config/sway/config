@@ -37,7 +37,7 @@ gaps inner 7
 
 ### Window colors
 #                       border background text indicator child_border
-client.focused          #F4B8E4 #F4B8E4 #303446 #F4B8E4 #F4B8E4
+client.focused          #CA9EE6 #CA9EE6 #303446 #CA9EE6 #CA9EE6
 client.unfocused        #303446 #303446 #C6D0F5 #303446 #303446
 client.focused_inactive #303446 #303446 #C6D0F5 #303446 #303446
 client.placeholder      #303446 #303446 #C6D0F5 #303446 #303446
