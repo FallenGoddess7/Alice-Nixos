@@ -10,7 +10,7 @@
     size = 24;
   };
   
-  home.packages = [ pkgs.catppuccin-gtk pkgs.papirus-icon-theme ];
+  home.packages = [ pkgs.gruvbox-dark-gtk pkgs.papirus-icon-theme ];
   
   gtk = {
     enable = true;
@@ -18,7 +18,7 @@
       name = "Papirus-Dark";
     };
     theme = {
-      name = "catppuccin-frappe";
+      name = "gruvbox-dark";
     };
 
     gtk3 = {
