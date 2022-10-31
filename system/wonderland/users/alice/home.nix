@@ -39,6 +39,9 @@
     #rust
     rustc
     cargo
+
+    #x86-64 assembly
+    nasm
   ];
 
   programs.git = {

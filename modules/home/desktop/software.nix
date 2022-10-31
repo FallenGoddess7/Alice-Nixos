@@ -14,6 +14,7 @@
 
     # Launchers
     wofi
+    rofi-wayland
 
     # Utilities
     wl-clipboard
