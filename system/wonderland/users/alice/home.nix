@@ -35,6 +35,9 @@
     
     #python
     python3
+
+    #lua
+    lua
     
     #rust
     rustc
