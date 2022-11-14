@@ -12,12 +12,12 @@
   boot.kernelModules = [ "kvm-intel" "wl" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/530908e0-283e-464c-ba5a-9ccfe767b253";
+    { device = "/dev/disk/by-uuid/c8069a62-1330-4f18-b22c-2f14eef81732";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/1095-0DDD";
+    { device = "/dev/disk/by-uuid/C2ED-72B0";
       fsType = "vfat";
     };
 
