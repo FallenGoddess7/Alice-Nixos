@@ -32,7 +32,7 @@
   ];
     programs.neovim = {
     enable = true;
-    vimAlias = true;
+    vimAlias = false;
     # extraConfig = (builtins.readFile ./init.vim);
     plugins = with pkgs.vimPlugins; [
       ranger-vim
