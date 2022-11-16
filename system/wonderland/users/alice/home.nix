@@ -71,6 +71,10 @@
     ### ---------- }}}
   ];
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
   programs.git = {
     enable = true;
     userName  = "alicetabby";
