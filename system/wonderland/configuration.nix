@@ -1,7 +1,7 @@
 { config, pkgs, home-manager, ... }:
 {
   imports = [
-    ../../modules/system/base
+    #../../modules/system/base
     ../../modules/system/desktop
     ../../modules/system/runtimes
     ./hardware-configuration.nix

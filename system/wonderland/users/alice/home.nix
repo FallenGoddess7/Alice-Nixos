@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../../../../modules/home/base
     ../../../../modules/home/desktop
   ];
 
@@ -10,15 +9,32 @@
   home.homeDirectory = "/home/alice";
 
   home.packages = with pkgs; [
-    # Desktop software
+    ### DESKTOP SOFTWARE ---------- {{{
+    # Browswers
+    brave
+    firefox
+
+    # Terminal
+    kitty
+
+    # Terminal Apps
+    starship
+    ranger
+
+    # Launchers
+    wofi
+    rofi-wayland
+
+    # Utilities
+    wl-clipboard
+    autotiling
+    mako
+    waybar
 
     # Gaming
     discord
     betterdiscordctl
     steam
-
-    # Development tools
-    
 
     # CLI tools
     zathura
@@ -27,27 +43,36 @@
     pfetch
     figlet
     cbonsai
+    grim
+    slurp
+    pavucontrol
+    wlr-randr
+    mpv
+    cava
+    ### ---------- }}}
 
-    # Programming Languages
-    #C/C++
+    ### Programming Languages ---------- {{{
+    # C/C++
     clang
     gnumake
     
-    #python
+    # python
     python3
 
-    #lua
+    # lua
     lua
     
-    #rust
+    # rust
     rustc
     cargo
 
-    #x86-64 assembly
+    # x86-64 assembly
     nasm
+    ### ---------- }}}
   ];
 
   programs.git = {
+    enable = true;
     userName  = "alicetabby";
     userEmail = "Jacobtrippy124@gmail.com";
   };
@@ -56,6 +81,28 @@
   services.gpg-agent = {
     enable = true;
     pinentryFlavor = "gnome3";
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    shellAliases = {
+      l = "exa";
+      ls = "exa -la --group-directories-first";
+      lt = "exa -T -I \"node_modules|venv|Build\"";
+      rm = "rm -i";
+      mv = "mv -i";
+      cp = "cp -i";
+    };
+    history = {
+      size = 1000;
+      path = "${config.xdg.dataHome}/zsh/history";
+    };
+    initExtra = ''
+      eval "$(starship init zsh)"
+      echo -n "$(pfetch)"
+    '';
   };
 
   # This value determines the Home Manager release that your
