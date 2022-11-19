@@ -1,0 +1,38 @@
+
+
+
+#window {
+    border-radius: 0px;
+    border-style: solid;
+    border-color: #98971A;
+    border-width: 3px;
+    margin: 2px;
+    background-color: rgba(40, 40, 40, 0.95);
+}
+
+#input {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #98971A;
+    border-width: 2px;
+    color: #FBF1C7;
+    background-color: #282828;
+}
+
+#outer-box {
+    font-family: "Inconsolata";
+    font-size: 13pt;
+    margin: 6px;
+}
+
+#entry {
+    padding: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#entry:selected {
+    color: #FBF1C7;
+    background-color: #282828;
+}
