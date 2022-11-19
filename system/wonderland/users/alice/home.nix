@@ -58,7 +58,7 @@
 
     ### Programming Languages ---------- {{{
     # C/C++
-    clang
+    gcc
     gnumake
     
     # python
