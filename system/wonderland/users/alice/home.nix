@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../../../modules/home/desktop
+    ../../../../modules/home/
   ];
 
   home.username = "alice";
@@ -23,7 +23,6 @@
 
     # Launchers
     wofi
-    rofi-wayland
 
     # Utilities
     wl-clipboard
