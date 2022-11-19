@@ -1,3 +1,13 @@
+###############################
+#  _   _ _____  _____  ____   #
+# | \ | |_ _\ \/ / _ \/ ___|  #
+# |  \| || | \  / | | \___ \  #
+# | |\  || | /  \ |_| |___) | #
+# |_| \_|___/_/\_\___/|____/  #
+###############################
+
+# Alice's Configuration of NIXOS
+
 { config, pkgs, home-manager, ... }:
 {
   imports = [
@@ -8,7 +18,6 @@
   nixpkgs.overlays = [
     (import ../../overlays/discord.nix)
     (import ../../overlays/electron.nix)
-    (import ../../overlays/waybar.nix)
   ];
 
   # Allow the installation of non-FOSS packages.
