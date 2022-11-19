@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }
+{ config, pkgs, lib, ... }:
 {
   programs.vim = {
     enable = true;
@@ -15,6 +15,7 @@
           set termguicolors
       endif
 
+      set background=dark
       let g:gruvbox_contrast_dark = 'medium'
       let g:gruvbox_transparent_bg = 1
       let g:gruvbox_italic = 1
@@ -23,7 +24,7 @@
       colorscheme gruvbox
 
       let g:lightline = {
-      \ 'colorscheme': 'everforest',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \     'left': [ [ 'mode', 'paste' ],
       \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
@@ -40,12 +41,12 @@
       \     'gitbranch': 'gitbranch#name'
       \ },
       \}
-      set lastline = 2
+      set laststatus=2
 
       set nocompatible
       syntax on
       set number
-      set tabstop = 4
+      set tabstop=4
       set expandtab
       set hlsearch
       set incsearch
@@ -54,4 +55,5 @@
       set smartcase
       set noshowmode
     '';
+  };
 }

@@ -4,5 +4,6 @@
     ./configs.nix
     ./software.nix
     ./theme.nix
+    ./vim.nix
   ];
 }
