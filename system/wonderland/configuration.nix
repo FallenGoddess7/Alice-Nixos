@@ -11,7 +11,7 @@
 { config, pkgs, home-manager, ... }:
 {
   imports = [
-    ../../modules/system/desktop
+    ../../modules/system
     ./hardware-configuration.nix
   ];
   
