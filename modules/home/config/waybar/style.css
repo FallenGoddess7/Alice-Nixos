@@ -9,6 +9,16 @@
 /* ALICE'S CONFIGURATION OF WAYBAR */
 
 /* Reset All Styles */
+
+/* Temporary Fix */
+label {
+    all: unset;
+}
+button {
+    all: unset;
+}
+/* End of Temporary Fix */
+
 * {
 	border: none;
 	border-radius: 0;
@@ -41,7 +51,7 @@
 	padding: 0.1rem 0.5rem;
 	margin: 2px 1px;
 	background: #98971A;
-	color: #000000;
+	color: #282828;
 	border-radius: 10px;
 }
 
