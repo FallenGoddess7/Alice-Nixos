@@ -59,11 +59,13 @@ button {
 
 #workspaces {
 	font-size: 17px;
+	/*padding: 0.1rem 0.2rem;*/
 }
 #workspaces button {
 	border-bottom: 0px solid transparent;
 	margin-bottom: 0px;
-	padding: 0px 3px;
+	margin: 0.0rem 0.2rem;
+	padding: 0.1rem 0.3rem;
 	color: #98971A;
 }
 #workspaces button.focused {
