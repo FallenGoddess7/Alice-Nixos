@@ -1,9 +1,8 @@
 { config, pkgs, lib, ... }:
 {
   imports = [
-    ./configs.nix
+    ./config.nix
     ./theme.nix
-    #./vim.nix
     ./shell.nix
   ];
 }
