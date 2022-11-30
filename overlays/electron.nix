@@ -13,7 +13,5 @@ let
   );
 in
   super: {
-    brave = enableWayland super.brave "brave";
     discord = enableWayland super.discord "discord";
-    vscode = enableWayland super.vscode "code";
   }
