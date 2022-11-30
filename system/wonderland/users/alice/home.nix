@@ -37,7 +37,6 @@
 
     # Gaming
     discord
-    betterdiscordctl
     steam
 
     # CLI tools
@@ -50,10 +49,8 @@
     grim
     slurp
     pavucontrol
-    helvum
     wlr-randr
     mpv
-    cava
     ### ---------- }}}
 
     ### Programming Languages ---------- {{{
@@ -78,6 +75,7 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
   };
 
   programs.git = {
