@@ -89,30 +89,7 @@
     enable = true;
     pinentryFlavor = "gnome3";
   };
-
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-    shellAliases = {
-      l = "exa";
-      ls = "exa -la --group-directories-first";
-      lt = "exa -T -I \"node_modules|venv|Build\"";
-      rm = "rm -i";
-      mv = "mv -i";
-      cp = "cp -i";
-    };
-    history = {
-      size = 1000;
-      path = "${config.xdg.dataHome}/zsh/history";
-    };
-    initExtra = ''
-      eval "$(starship init zsh)"
-      echo -n "$(pfetch)"
-    '';
-  };
-
-  # This value determines the Home Manager release that your
+  
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
   # incompatible changes.
