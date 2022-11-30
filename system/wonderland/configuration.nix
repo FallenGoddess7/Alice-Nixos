@@ -146,6 +146,17 @@
     "x-scheme-handler/unknown" = "brave-browser.desktop";
   };
 
+  # Nix
+  nix = {
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      '';
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 14d";
+    };
+  };
+
   ### SYSTEM INSTALL VERSION ---------- {{{
   # DO NOT CHANGE UNLESS YOU'RE CERTAIN YOUR CONFIGS WILL WORK WITH THE NEWER VERSION!!!
   system.stateVersion = "22.05";

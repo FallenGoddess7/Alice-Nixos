@@ -8,16 +8,16 @@
 { config, pkgs, lib, ... }:
 {
   environment.systemPackages = with pkgs; [
-    vim
-    wget
     curl
+    exa
     git
+    gzip
     htop
     killall
-    gzip
     unzip
+    vim
+    wget
     zip
-    exa
   ];
 
   environment.shells = [ pkgs.zsh pkgs.bash ];

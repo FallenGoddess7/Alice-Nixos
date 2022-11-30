@@ -2,7 +2,6 @@
 {
   imports = [
     ./java.nix
-    ./nixos.nix
     ./software.nix
     ./sway.nix
   ];
