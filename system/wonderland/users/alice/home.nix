@@ -16,8 +16,7 @@
 
   home.packages = with pkgs; [
     ### DESKTOP SOFTWARE ---------- {{{
-    # Browswers
-    brave
+    # Browswer
     firefox
 
     # Terminal
@@ -51,6 +50,7 @@
     grim
     slurp
     pavucontrol
+    helvum
     wlr-randr
     mpv
     cava
