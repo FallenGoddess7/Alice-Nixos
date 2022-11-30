@@ -3,7 +3,7 @@
   imports = [
     ./configs.nix
     ./theme.nix
-    ./vim.nix
+    #./vim.nix
     ./shell.nix
   ];
 }
