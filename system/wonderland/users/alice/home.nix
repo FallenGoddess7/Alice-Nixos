@@ -38,6 +38,8 @@
     # Gaming
     discord
     steam
+    prismlauncher
+    minecraft-server
 
     # CLI tools
     zathura
