@@ -159,6 +159,6 @@
 
   ### SYSTEM INSTALL VERSION ---------- {{{
   # DO NOT CHANGE UNLESS YOU'RE CERTAIN YOUR CONFIGS WILL WORK WITH THE NEWER VERSION!!!
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
   ### }}}
 }
