@@ -93,4 +93,9 @@
       set noshowmode
     '';
   };
+  programs.neovim = {
+    enable = true;
+    plugins = [
+    ];
+  };
 }

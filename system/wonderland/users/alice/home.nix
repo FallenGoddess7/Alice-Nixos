@@ -46,6 +46,8 @@
     mpv
     neofetch
     pfetch
+    uwufetch
+
     figlet
     cbonsai
     grim
