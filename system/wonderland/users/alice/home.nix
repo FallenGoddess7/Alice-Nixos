@@ -40,6 +40,7 @@
     steam
     prismlauncher
     minecraft-server
+    yuzu-mainline
 
     # CLI tools
     zathura
