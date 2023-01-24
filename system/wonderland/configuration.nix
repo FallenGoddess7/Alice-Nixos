@@ -22,7 +22,7 @@
   # Allow Home-Manager to manage user accounts
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.alice = import ./users/alice/home.nix;
+  home-manager.users.alice = import ./alice/home.nix;
 
   # User creation & setup
   users.users.alice = {
@@ -60,8 +60,7 @@
   programs = {
     java = {
       enable = true;
-      additionalRuntimes = { inherit (pkgs) jdk17 jdk11 jdk8; };
-      package = pkgs.jdk17;
+      package = pkgs.jdk;
     };
     steam = {
       enable = true;
