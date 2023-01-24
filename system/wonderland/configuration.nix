@@ -10,29 +10,24 @@
 
 { config, pkgs, home-manager, ... }:
 {
-  imports = [
+  imports = [ 
     ../../modules/system
     ./hardware-configuration.nix
   ];
-  
   nixpkgs.overlays = [
     (import ../../overlays/discord.nix)
     (import ../../overlays/electron.nix)
   ];
-
-  # Allow the installation of non-FOSS packages.
-  nixpkgs.config.allowUnfree = true;
-
-  # Manage the user accounts using home manager.
+  
+  # Allow Home-Manager to manage user accounts
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.alice = import ./users/alice/home.nix;
 
-  # Create User. Don't forget to change password.
+  # User creation & setup
   users.users.alice = {
     isNormalUser = true;
     description = "alice";
-    initialPassword = "Nixos";
     extraGroups = [
       "wheel"
       "networkmanager"
@@ -40,78 +35,70 @@
       "video"
       "adbusers"
     ];
-    packages = with pkgs; [];
     shell = pkgs.zsh;
   };
-
-  # Disable sudo password.
-  security = {
-    sudo.wheelNeedsPassword = false;
-  };
+  security.sudo.wheelNeedsPassword = false;
   
-  # Packages relegated to the entire system.
+  # System-wide Packages
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    curl
+    exa
+    git
+    gzip
+    htop
+    killall
+    unzip
+    vim
+    wget
+    zip
   ];
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
-  # Programs and configuring them.
-  programs.java = {
-    enable = true;
-    additionalRuntimes = { inherit (pkgs) jdk17 jdk11 jdk8; };
-    package = pkgs.jdk17;
+  # Special Programs
+  programs = {
+    java = {
+      enable = true;
+      additionalRuntimes = { inherit (pkgs) jdk17 jdk11 jdk8; };
+      package = pkgs.jdk17;
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+    };
   };
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
+  # Default Apps
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
   };
+  environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
 
-  # Time zone and localization.
-  time.timeZone = "America/Chicago";
-  i18n.defaultLocale = "en_US.utf8";
-
-  # Fonts.
+  # Fonts
   fonts.fonts = with pkgs; [
     inconsolata
-    mononoki
-    fira-code
     font-awesome
     powerline-fonts
   ];
   
-  # Shell.
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+  # Time zone & localization
+  time.timeZone = "America/Chicago";
+  i18n.defaultLocale = "en_US.utf8";
+  
+  # X11 Keymap
+  services.xserver.layout = "us";
 
-  # MTP Devices.
-  services.gvfs.enable = true;
-  programs.adb.enable = true;
-
-  # Kernel.
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-
-  # Kernel Parameters.
-  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
-
-  # Modules to load with kernel.
-  boot.initrd.kernelModules = [ "amdgpu" ];
-
-  # Enable silent boot.
-  boot.initrd.verbose = false;
-  boot.consoleLogLevel = 0;
-  boot.plymouth.enable = true;
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
-
-  # Networking.
+  # Networking
   networking.hostName = "wonderland";
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = true;
 
-  # Sound.
+  # Sound
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -123,41 +110,43 @@
     jack.enable = true;
   };
 
-  # Display drivers & Options.
-  services.xserver.videoDriver = [ "amdgpu" ];
+  # Hardware
   hardware.opengl.enable = true;
-  
-  # Enable CUPS for printing documents.
   services.printing.enable = true;
 
-  # Set keymap for X11.
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
+  # MTP Devices
+  services.gvfs.enable = true;
+  programs.adb.enable = true;
+
+  boot = {
+    # Kernel
+    kernelPackages = pkgs.linuxPackages_zen;
+    kernelParams = [ "quiet" "splash" "udev.log_priority=3" "rd.udev.log_level=3" ];
+    initrd.kernelModules = [ "amdgpu" ];
    
-  # Default Apps
-  xdg.mime.defaultApplications = {
-    "text/html" = "brave-browser.desktop";
-    "x-scheme-handler/http" = "brave-browser.desktop";
-    "x-scheme-handler/https" = "brave-browser.desktop";
-    "x-scheme-handler/about" = "brave-browser.desktop";
-    "x-scheme-handler/unknown" = "brave-browser.desktop";
+   # Silent Boot
+    initrd.verbose = false;
+    consoleLogLevel = 0;
+    plymouth.enable =true;
+    
+    loader = {
+      systemd-boot.enable = true;
+      timeout = 8;
+      efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot/efi";
+    };
   };
 
-  # Nix
   nix = {
-    extraOptions = ''
-      experimental-features = nix-command flakes
-      '';
+    extraOptions = "experimental-features = nix-command flakes";
     gc = {
       automatic = true;
       options = "--delete-older-than 14d";
     };
   };
 
-  ### SYSTEM INSTALL VERSION ---------- {{{
-  # DO NOT CHANGE UNLESS YOU'RE CERTAIN YOUR CONFIGS WILL WORK WITH THE NEWER VERSION!!!
+  # State Version is the version the system was installed at.
+  # Updating this can break your system!
+  # Ensure your configs will work with the newer version to avoid breakages!
   system.stateVersion = "22.11";
-  ### }}}
 }
