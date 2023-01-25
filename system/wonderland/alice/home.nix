@@ -8,14 +8,13 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../../../../modules/home
+    ../../../modules/home
   ];
 
   home.username = "alice";
   home.homeDirectory = "/home/alice";
 
   home.packages = with pkgs; [
-    ### DESKTOP SOFTWARE ---------- {{{
     # Browswer
     firefox
 
@@ -25,6 +24,7 @@
     # Terminal Apps
     starship
     ranger
+    zathura
 
     # Launchers
     wofi
@@ -40,11 +40,8 @@
     discord
     steam
     prismlauncher
-    minecraft-server
 
     # CLI tools
-    zathura
-    mpv
     neofetch
     pfetch
     figlet
@@ -54,26 +51,15 @@
     pavucontrol
     wlr-randr
     mpv
-    ### ---------- }}}
 
-    ### Programming Languages ---------- {{{
-    # C/C++
+    # Programming Languages
     gcc
     gnumake
-    
-    # python
     python3
-
-    # lua
     lua
-    
-    # rust
     rustc
     cargo
-
-    # x86-64 assembly
     nasm
-    ### ---------- }}}
   ];
 
   home.sessionVariables = {
