@@ -34,6 +34,7 @@
       "audio"
       "video"
       "adbusers"
+      "plugdev"
     ];
     shell = pkgs.zsh;
   };
@@ -111,6 +112,7 @@
 
   # Hardware
   hardware.opengl.enable = true;
+  hardware.openrazer.enable = true;
   services.printing.enable = true;
 
   # MTP Devices

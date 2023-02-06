@@ -35,6 +35,8 @@
     autotiling
     mako
     waybar
+    eww-wayland
+    polychromatic
 
     # Gaming
     discord
