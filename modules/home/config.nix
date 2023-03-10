@@ -83,8 +83,8 @@
       set nocompatible
       syntax on
       set number
-      set tabstop=4
-      set expandtab
+      set tabstop=8
+      set shiftwidth=0
       set hlsearch
       set incsearch
       set showmatch
