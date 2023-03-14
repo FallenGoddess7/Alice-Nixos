@@ -36,12 +36,12 @@ gaps inner 7
 
 ### Window colors
 #                       border background text indicator child_border
-client.focused          #98971A #98971A #282828 #98971A #98971A
-client.unfocused        #282828 #282828 #FBF1C7 #282828 #282828
-client.focused_inactive #282828 #282828 #FBF1C7 #282828 #282828
-client.placeholder      #282828 #282828 #FBF1C7 #282828 #282828
-client.urgent           #FB4934 #FB4934 #282828 #FB4934 #FB4934
-client.background               #282828
+client.focused          #A7C080 #A7C080 #272E33 #A7C080 #A7C080
+client.unfocused        #1E2326 #1E2326 #D3C6AA #1E2326 #1E2326
+client.focused_inactive #1E2326 #1E2326 #D3C6AA #1E2326 #1E2326
+client.placeholder      #1E2326 #1E2326 #D3C6AA #1E2326 #1E2326
+client.urgent           #E67E80 #E67E80 #272E33 #E67E80 #E67E80
+client.background               #272E33
 
 ### Always float certain windows
 for_window [app_id="pop-up"]                     floating enable
@@ -184,9 +184,8 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-### Status Bar:
-bar {
-    swaybar_command waybar
-}
+### Status Bar
+exec eww daemon
+exec eww open bar
 
 include /etc/sway/config.d/*
