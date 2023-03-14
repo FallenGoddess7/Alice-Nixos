@@ -46,6 +46,7 @@
       vim-gitbranch
       vim-nix
       vim-polyglot
+      yuck-vim
     ];
     extraConfig = ''
       if has('termguicolors')
