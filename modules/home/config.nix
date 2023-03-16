@@ -3,7 +3,7 @@
   xdg.configFile.eww = {
     source = ./config/eww;
     recursive = true;
-  }
+  };
 
   xdg.configFile.kitty = {
     source = ./config/kitty;
