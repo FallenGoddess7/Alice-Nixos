@@ -1,0 +1,46 @@
+#!/bin/sh
+
+workspaces() {
+	ws1=1
+	ws2=2
+	ws3=3
+	ws4=4
+	ws5=5
+
+	f1=0
+	f2=0
+	f3=0
+	f4=0
+	f5=0
+
+	FOCUSED=$(swaymsg -r -t get_outputs | grep current_workspace | awk '{print $2}' | tr -d \", )
+
+	case $FOCUSED in
+		$ws1)
+			f1=1
+			;;
+
+		$ws2)
+			f2=1
+			;;
+
+		$ws3)
+			f3=1
+			;;
+
+		$ws4)
+			f4=1
+			;;
+		
+		$ws5)
+			f5=1
+	esac
+
+	echo "(box	:class \"workspaces\" :orientation \"h\" :halign \"start\" :space-evenly \"true\" :spacing \"8\" (button :onclick \"sway workspace $ws1\"	:class \"$f1\"	\"\") (button :onclick \"sway workspace $ws2\"	:class \"$f2\"	\"\") (button :onclick \"sway workspace $ws3\"	:class \"$f3\"	\"\") (button :onclick \"sway workspace $ws4\"	:class \"$f4\"	\"\") (button :onclick \"sway workspace $ws5\"	:class \"$f5\"	\"\"))"
+
+}
+
+workspaces
+swaymsg -m -t subscribe '["workspace"]' | while read -r ; do
+	workspaces
+done

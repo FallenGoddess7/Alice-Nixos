@@ -1,0 +1,121 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  ________          ____          __ ;;
+;; |  ____\ \        / /\ \        / / ;;
+;; | |__   \ \  /\  / /  \ \  /\  / /  ;;
+;; |  __|   \ \/  \/ /    \ \/  \/ /   ;;
+;; | |____   \  /\  /      \  /\  /    ;;
+;; |______|   \/  \/        \/  \/     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Alice's Configuration of EWW (bar)
+
+;; Variables ;;
+(defvar volume false)
+(defvar set_volume "amixer -D pipewire sset Master {}%")
+(defpoll current_volume :interval "1s" "amixer -D pipewire sget Master | grep 'Left:' | awk -F '[][]' '{ print $2 }' | tr -d '%' | head -1")
+(defpoll time :interval "5s" "date '+%l:%M %P'")
+(defpoll network :interval "1s" "scripts/network")
+
+;; Workspaces ;;
+(defwidget workspaces []
+  (literal :content workspace))
+(deflisten workspace "scripts/workspace")
+
+;; Time and Date ;;
+(defwidget time []
+  (box :class "time" 
+       :orientation "h" 
+       :space-evenly false 
+       :halign "center"
+  time
+))
+
+;; Volume ;;
+(defwidget volume []
+  (eventbox :onhover "eww update volume=true"
+            :onhoverlost "eww update volume=false"
+  (box      :class "volume" 
+            :orientation "h"
+            :space-evenly "false" 
+  (box      :class "label" "")
+  (revealer :transition "slideleft"
+            :reveal volume
+            :duration "550ms"
+  (scale    :min 0
+            :max 101
+            :value current_volume
+            :tooltip "Volume: ${current_volume}%"
+            :onchange set_volume
+)))))
+
+;; Temperature ;;
+(defwidget temperature []
+  (box :orientation "h"
+       :class "temperature"
+       :space-evenly true
+    (box :class "label" "| ")
+    (box :class "text" "${EWW_TEMPS.CORETEMP_PACKAGE_ID_0} |"
+)))
+
+;; Memory ;;
+(defwidget memory []
+  (box :orientation "h"
+       :class "memory"
+       :space-evenly false
+    (box :class "label" "")
+    (scale :min 0
+           :max 101
+           :value {EWW_RAM.used_mem_perc}
+)))
+
+;; CPU ;;
+(defwidget cpu []
+  (box :orientation "h"
+       :class "cpu"
+       :space-evenly false
+    (box :class "label" "")
+    (scale :min 0
+           :max 101
+           :value {EWW_CPU.avg}
+)))
+
+;; Network ;;
+(defwidget net []
+  (box :orientation "h"
+       :class "network"
+       :space-evenly false
+    (button
+       :class ""
+       :onclick "scripts/network ShowInfo"
+       network
+)))
+
+;; Control ;;
+(defwidget control []
+  (box :class "control"
+       :orientation "h"
+       :space-evenly false
+       :halign "end"
+    (memory)
+    (cpu)
+    (temperature)
+    (volume)
+    (net)))
+
+;; Bar Declaration ;;
+(defwidget bar []
+  (centerbox :orientation "h"
+    (workspaces)
+    (time)
+    (control)))
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "20px"
+                      :anchor "top center")
+  :exclusive true
+  :stacking "fg"
+  (bar))

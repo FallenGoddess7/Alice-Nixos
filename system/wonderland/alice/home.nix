@@ -34,6 +34,8 @@
     wl-clipboard
     autotiling
     mako
+    dunst
+    libnotify
     waybar
     eww-wayland
     polychromatic

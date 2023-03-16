@@ -1,0 +1,90 @@
+//////////////////////////////////////////
+//  ________          ____          __  //
+// |  ____\ \        / /\ \        / /  //
+// | |__   \ \  /\  / /  \ \  /\  / /   //
+// |  __|   \ \/  \/ /    \ \/  \/ /    //
+// | |____   \  /\  /      \  /\  /     //
+// |______|   \/  \/        \/  \/      //
+//                                      //
+//////////////////////////////////////////
+
+// Alice's Configuration of EWW (bar)
+
+// Everything //
+* {
+	all: unset;
+}
+
+// Bar //
+.bar {
+	background-color: #272E33;
+	color: #D3C6AA;
+	padding: 3rem;
+	margin: .2rem;
+}
+
+// Workspaces //
+.workspaces {
+	padding: .6rem 0rem 0rem .7rem;
+	margin: .1rem;
+	font-size: 1rem;
+	color: #495156
+}
+
+.workspaces button:hover {
+	color: #D3C6AA;
+}
+
+.1 {
+	font-size: 1.3rem;
+	color: #A7C080;
+}
+
+// CPU, Memory, and Volume bars //
+.cpu		scale trough highlight,
+.memory scale trough highlight,
+.volume scale trough highlight {
+	all: unset;
+	background-color: #A7C080;
+	color: #495156;
+	border-radius: 1rem;
+}
+
+.cpu		scale trough,
+.memory scale trough,
+.volume scale trough {
+	all: unset;
+	background-color: #495156;
+	border-radius: 1rem;
+	min-height: .5rem;
+	min-width: 4.5rem;
+	margin-left: .3rem;
+	margin-right: .5rem;
+}
+
+// CPU, Memory, and Volume Icons //
+.label {
+	font-size: 1.2rem;
+	padding: .2rem;
+	margin: .3rem;
+}
+
+// Network Icon //
+.network {
+	font-size: 1.2rem;
+	padding: 0rem .7rem 0rem 0rem;
+	margin: .3rem;
+}
+
+// Time //
+.time {
+	font-size: 1.2rem;
+	margin: .1rem;
+}
+
+// Temperature //
+.temperature {
+	padding: .2rem;
+	margin: .1rem;
+	font-size: 1.2rem;
+}
