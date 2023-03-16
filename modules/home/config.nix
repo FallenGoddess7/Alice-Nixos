@@ -1,5 +1,10 @@
 { config, pkgs, lib, ... }:
 {
+  xdg.configFile.eww = {
+    source = ./config/eww;
+    recursive = true;
+  }
+
   xdg.configFile.kitty = {
     source = ./config/kitty;
     recursive = true;
