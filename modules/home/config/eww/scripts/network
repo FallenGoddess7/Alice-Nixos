@@ -17,7 +17,7 @@ function IconUpdate() {
 	elif [ "$(nmcli connection show --active | grep -oh "\w*wifi\w*")" == "wifi" ]; then
 		icon=""
 	else
-		icon=""
+		icon=""
 	fi
 	printf "%s" "$icon"
 }
