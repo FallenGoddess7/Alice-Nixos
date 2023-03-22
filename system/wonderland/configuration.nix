@@ -91,7 +91,7 @@
     defaultFonts = {
       serif = [ "Ubuntu" ];
       sansSerif = [ "Ubuntu" ];
-      monospace = [ "Ubuntu" ];
+      monospace = [ "Iosevka" "Ubuntu" ];
     };
   };
   fonts.fontDir.enable = true;
