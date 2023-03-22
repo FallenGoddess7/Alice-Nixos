@@ -27,7 +27,7 @@ set $menu wofi --show-drun
 output * bg ~/NixConf/wallpapers/wallhaven-v9jkml.jpg fill
 
 ### Fonts
-font inconsolata 14
+font iosevka 14
 
 ### Borders
 default_border pixel 3

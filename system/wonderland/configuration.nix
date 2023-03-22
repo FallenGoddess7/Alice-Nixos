@@ -80,17 +80,21 @@
   environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.firefox}/bin/firefox";
 
   # Fonts
+  fonts.enableDefaultFonts = true;
   fonts.fonts = with pkgs; [
-    inconsolata
     iosevka
     font-awesome
     powerline-fonts
+    ubuntu_font_family
   ];
   fonts.fontconfig = {
     defaultFonts = {
-      monospace = [ "iosevka" ];
+      serif = [ "Ubuntu" ];
+      sansSerif = [ "Ubuntu" ];
+      monospace = [ "Ubuntu" ];
     };
   };
+  fonts.fontDir.enable = true;
   
   # Time zone & localization
   time.timeZone = "America/Chicago";
