@@ -41,7 +41,7 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       colorizer
-      gruvbox
+      gruvbox-material
       lightline-vim
       vim-gitbranch
       vim-nix
@@ -54,15 +54,15 @@
       endif
  
       set background=dark
-      let g:gruvbox_contrast_dark = 'medium'
-      let g:gruvbox_transparent_bg = 1
-      let g:gruvbox_italic = 1
-      let g:gruvbox_bold = 1
+      let g:gruvbox_material_background = 'medium'
+      let g:gruvbox_material_transparent_background = 1
+      let g:gruvbox_material_enable_bold = 1
+      let g:gruvbox_material_enable_italic = 1
  
-      colorscheme gruvbox
+      colorscheme gruvbox-material
  
       let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'gruvbox_material',
       \ 'active': {
       \     'left': [ [ 'mode', 'paste' ],
       \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
