@@ -13,12 +13,13 @@
 // Everything //
 * {
 	all: unset;
+	font-family: monospace;
 }
 
 // Bar //
 .bar {
-	background-color: #272E33;
-	color: #D3C6AA;
+	background-color: #282828;
+	color: #D4BE98;
 	padding: 3rem;
 	margin: .2rem;
 }
@@ -28,16 +29,16 @@
 	padding: .6rem 0rem 0rem .7rem;
 	margin: .1rem;
 	font-size: 1rem;
-	color: #495156
+	color: #45403D
 }
 
 .workspaces button:hover {
-	color: #D3C6AA;
+	color: #D4BE98;
 }
 
 .1 {
 	font-size: 1.3rem;
-	color: #A7C080;
+	color: #A9B665;
 }
 
 // CPU, Memory, and Volume bars //
@@ -45,8 +46,8 @@
 .memory scale trough highlight,
 .volume scale trough highlight {
 	all: unset;
-	background-color: #A7C080;
-	color: #495156;
+	background-color: #A9B665;
+	color: #45403D;
 	border-radius: 1rem;
 }
 
@@ -54,7 +55,7 @@
 .memory scale trough,
 .volume scale trough {
 	all: unset;
-	background-color: #495156;
+	background-color: #45403D;
 	border-radius: 1rem;
 	min-height: .5rem;
 	min-width: 4.5rem;
@@ -78,13 +79,14 @@
 
 // Time //
 .time {
-	font-size: 1.2rem;
+	font-size: 13pt;
 	margin: .1rem;
+	font-family: monospace;
 }
 
 // Temperature //
 .temperature {
 	padding: .2rem;
 	margin: .1rem;
-	font-size: 1.2rem;
+	font-size: 13pt;
 }

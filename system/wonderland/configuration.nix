@@ -82,9 +82,15 @@
   # Fonts
   fonts.fonts = with pkgs; [
     inconsolata
+    iosevka
     font-awesome
     powerline-fonts
   ];
+  fonts.fontconfig = {
+    defaultFonts = {
+      monospace = [ "iosevka" ];
+    };
+  };
   
   # Time zone & localization
   time.timeZone = "America/Chicago";

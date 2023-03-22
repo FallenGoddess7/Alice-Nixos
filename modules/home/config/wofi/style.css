@@ -9,7 +9,7 @@
 #window {
     border-radius: 0px;
     border-style: solid;
-    border-color: #98971A;
+    border-color: #A9B665;
     border-width: 3px;
     margin: 2px;
     background-color: rgba(40, 40, 40, 0.95);
@@ -19,9 +19,9 @@
     margin-bottom: 8px;
     border-radius: 4px;
     border-style: solid;
-    border-color: #98971A;
+    border-color: #A9B665;
     border-width: 2px;
-    color: #FBF1C7;
+    color: #D4BE98;
     background-color: #282828;
 }
 
@@ -38,6 +38,6 @@
 }
 
 #entry:selected {
-    color: #FBF1C7;
+    color: #D4BE98;
     background-color: #282828;
 }
