@@ -84,6 +84,7 @@
       set nocompatible
       syntax on
       set number
+      set relativenumber
       set tabstop=8
       set shiftwidth=0
       set hlsearch

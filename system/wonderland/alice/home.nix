@@ -58,6 +58,7 @@
 
     # Programming Languages
     gcc
+    gdb
     gnumake
     python3
     lua
