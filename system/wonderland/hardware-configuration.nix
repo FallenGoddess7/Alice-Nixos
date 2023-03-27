@@ -35,6 +35,4 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
-  # high-resolution display
-  hardware.video.hidpi.enable = lib.mkDefault true;
 }
