@@ -142,10 +142,37 @@
     
     loader = {
       systemd-boot.enable = true;
+      systemd-boot.consoleMode = "max";
       timeout = 8;
       efi.canTouchEfiVariables = true;
       efi.efiSysMountPoint = "/boot/efi";
     };
+  };
+
+  systemd.watchdog.rebootTime = "0";
+
+  console = {
+    earlySetup = true;
+    font = null;
+    keyMap = "us";
+    colors = [
+      "282828"
+      "ea6962"
+      "a9b665"
+      "e78a4e"
+      "7daea3"
+      "d3869b"
+      "89b482"
+      "d4be98"
+      "32302f"
+      "ea6962"
+      "a9b665"
+      "e78a4e"
+      "7daea3"
+      "d3869b"
+      "89b482"
+      "d4be98"
+    ];
   };
 
   nix = {

@@ -39,6 +39,7 @@
     waybar
     eww-wayland
     polychromatic
+    gnome.nautilus
 
     # Gaming
     discord
