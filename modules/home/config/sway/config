@@ -24,7 +24,7 @@ set $term kitty
 set $menu wofi --show-drun
 
 ### Wallpaper
-output * bg ~/NixConf/wallpapers/wallhaven-v9jkml.jpg fill
+output * bg ~/NixConf/wallpapers/wallhaven-x6e5po.jpg fill
 
 ### Fonts
 font iosevka 14
