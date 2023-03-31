@@ -28,13 +28,11 @@
 
     # Launchers
     wofi
-    rofi-wayland
 
     # Utilities
     wl-clipboard
     autotiling
     mako
-    dunst
     libnotify
     waybar
     eww-wayland
