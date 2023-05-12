@@ -53,6 +53,8 @@
     vim
     wget
     zip
+    p7zip
+    xboxdrv
   ];
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;

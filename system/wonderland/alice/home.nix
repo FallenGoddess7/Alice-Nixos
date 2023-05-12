@@ -43,6 +43,7 @@
     discord
     steam
     prismlauncher
+    retroarchFull
 
     # CLI tools
     neofetch
