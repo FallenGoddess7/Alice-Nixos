@@ -38,6 +38,7 @@
     eww-wayland
     polychromatic
     gnome.nautilus
+    tree
 
     # Gaming
     discord

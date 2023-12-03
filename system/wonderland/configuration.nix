@@ -39,6 +39,7 @@
     shell = pkgs.zsh;
   };
   security.sudo.wheelNeedsPassword = false;
+  nix.settings.trusted-users = ["alice"];
   
   # System-wide Packages
   nixpkgs.config.allowUnfree = true;
@@ -125,6 +126,7 @@
   # Hardware
   hardware.opengl.enable = true;
   hardware.openrazer.enable = true;
+  hardware.openrazer.users = ["alice"];
   services.printing.enable = true;
 
   # MTP Devices
